@@ -1,0 +1,185 @@
+:root {
+    --primary-color: #15AAA7;
+    --secondary-color: #D9D9D9;
+    --primary-background-color: #1F1F1F;
+    --secondary-background-color: #303030;
+}
+
+
+body{
+    background-color: var(--primary-background-color);
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+h1,h2,h3,a,p,span,header {
+    font-family: "Rubik", sans-serif;
+    font-weight: 400;
+    color: var(--secondary-color);
+}
+
+a {
+    text-decoration: none;
+}
+
+nav {
+    display: flex;
+    width: 100%;
+    background-color: var(--secondary-background-color);
+    /*border-bottom: 1px solid var(--secondary-color);*/
+}
+
+nav > .nav-section {
+    padding: 3rem 2rem;
+    display: flex;
+    gap: 1rem;
+    /*border-left: 1px solid var(--secondary-color);*/
+    align-items: center;
+    justify-content: center;
+}
+
+#nav-logo-section{
+    flex-basis: 15%;
+}
+
+#nav-user-section {
+    flex-grow: 1;
+    justify-content: flex-end;
+    gap: 5rem;
+    padding: 4rem;
+}
+
+#nav-user-section > a > i {
+    font-size: 3.5rem;
+}
+
+#nav-home-section, #nav-map-section, #nav-notes-section, #nav-timetable-section, #nav-news-section {
+    flex-basis: calc(100% / 5);
+}
+
+#nav-home-section, #nav-map-section, #nav-notes-section, #nav-timetable-section, #nav-news-section > a > i {
+    font-size: 3.5rem;
+}
+
+nav > .selected > a {
+    color: var(--primary-color);
+    text-shadow: #15AAA7 0 0 15px;
+}
+
+nav > div > a:hover {
+    color: var(--primary-color);
+    text-shadow: #15AAA7 0 0 15px;
+}
+
+#lesson-map > a:hover {
+    color: var(--primary-color);
+    text-shadow: #15AAA7 0 0 15px;
+}
+
+#bottom {
+    border-radius: 50px 50px 0 0;
+}
+
+/*#top {
+    background-image: linear-gradient(var(--secondary-background-color) 50%, var(--primary-background-color) 100%);
+}*/
+
+main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+main > .section {
+    flex-grow: 1;
+    padding: 3rem 2rem;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+}
+
+#main-lesson-section {
+    padding: 3rem 2rem;
+    gap: 1rem;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--secondary-background-color);
+    border-radius: 0 0 75px 75px;
+    flex-basis: auto;
+    box-shadow: var(--secondary-background-color) 0 10px 10px;
+}
+
+#main-lesson-section > .lesson-section {
+    width: 100%;
+}
+
+#lesson-description {
+    flex-grow: 1;
+    display: flex;
+    height: 100%;
+    flex-direction: row;
+    justify-content: center;
+    gap: 5rem;
+}
+
+#lesson-description > .lesson-description-section {
+    width: 100%;
+}
+
+#lesson-map{
+    flex-basis: 15%;
+    font-size: 4rem;
+}
+
+#lesson-description-header {
+    font-size: 2.5rem;
+}
+
+#lesson-description-main {
+    font-size: 1.5rem;
+}
+
+#lesson-description-timeleft {
+    font-size: 2.5rem;
+    align-self: center;
+}
+
+#lesson-description-a {
+    justify-content: flex-start;
+}
+
+#main-notes-section {
+    padding: 3rem 2rem;
+    gap: 1rem;
+    align-self: center;
+    width: 90%;
+    min-height: 10vh;
+    background-color: var(--secondary-background-color);
+    border-radius: 75px 75px 75px 75px;
+    flex-basis: auto;
+    display: flex;
+    flex-direction: column;
+    box-shadow: var(--secondary-background-color) 0 0 10px 15px;
+}
+
+#notes-header {
+    font-size: 2.5rem;
+}
+
+#notes-main {
+    font-size: 1.5rem;
+    flex-grow: 1;
+}
+
