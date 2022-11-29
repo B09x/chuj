@@ -12,7 +12,7 @@ body{
     flex-direction: column;
     height: 100vh;
     margin: 0;
-    overflow: hidden;
+    /*overflow: hidden;*/
 }
 
 * {
@@ -70,32 +70,43 @@ nav > .nav-section {
 
 nav > .selected > a {
     color: var(--primary-color);
-    text-shadow: #15AAA7 0 0 15px;
+    text-shadow: var(--primary-color) 0 0 15px;
 }
 
 nav > div > a:hover {
     color: var(--primary-color);
-    text-shadow: #15AAA7 0 0 15px;
+    text-shadow: var(--primary-color) 0 0 15px;
 }
 
 #lesson-map > a:hover {
     color: var(--primary-color);
-    text-shadow: #15AAA7 0 0 15px;
+    text-shadow: var(--primary-color) 0 0 15px;
 }
 
 #bottom {
     border-radius: 50px 50px 0 0;
+    margin-top: 2.5rem;
+    position: sticky;
+    bottom: 0;
 }
 
-/*#top {
-    background-image: linear-gradient(var(--secondary-background-color) 50%, var(--primary-background-color) 100%);
-}*/
+#top {
+    position: sticky;
+    top: 0;
+    transition: top 0.4s;
+}
+
+#main-lesson-section{
+    position: sticky;
+    top: 250px;
+    transition: top 0.4s;
+}
 
 main {
     flex-grow: 1;
     display: flex;
     flex-direction: column;
-    gap: 2.5rem;
+    gap: 4.5rem;
 }
 
 main > .section {
@@ -145,6 +156,7 @@ main > .section {
 
 #lesson-description-header {
     font-size: 2.5rem;
+    text-decoration: underline var(--primary-color);
 }
 
 #lesson-description-main {
@@ -180,6 +192,33 @@ main > .section {
 
 #notes-main {
     font-size: 1.5rem;
-    flex-grow: 1;
 }
 
+#main-news-section {
+    padding: 0 2rem;
+    gap: 1.5rem;
+    align-self: center;
+    width: 95%;
+    min-height: 10vh;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+#news-header{
+    font-size: 2.5rem;
+    text-decoration: underline var(--primary-color);
+    text-shadow: var(--secondary-color) 0 0 5px;
+}
+
+#main-news-section > article {
+    display: flex;
+    flex-direction: column;
+    height: 25vh;
+    overflow: visible;
+}
+
+#main-news-section > article > .article-news-section {
+    height: 100%;
+    border: 1px solid var(--secondary-color);
+}

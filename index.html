@@ -28,7 +28,7 @@
         <div id="main-lesson-section" class="main-section">
             <div id="lesson-description" class="lesson-section">
                 <div id="lesson-description-a" class="lesson-description-selection">
-                    <a id="lesson-description-header">Następna lekcja:</a><br><br>
+                    <a id="lesson-description-header">Następna lekcja</a><br><br>
                     <a id="lesson-description-main">J. Polski - Aleksandra Dobrzańska<br>Sala 102</a>
                 </div>
                 <div id="lesson-description-timeleft" class="lesson-description-selection">
@@ -46,7 +46,7 @@
 
         <div id="main-notes-section" class="main-section">
             <div id="notes-header" class="notes-section">
-                <a>Notatka do następnej lekcji:</a>
+                <a>Notatka do następnej lekcji</a>
             </div>
             <div id="notes-main" class="notes-section">
                 <a>Brak notatek</a>
@@ -54,7 +54,49 @@
         </div>
 
         <div id="main-news-section" class="main-section">
+            <div class="news-section">
+                <a id="news-header" >Aktualności</a>
+            </div>
+            <article>
+                <div class="article-news-section article-news-header">
 
+                </div>
+                <div class="article-news-section article-news-main">
+                    <a></a>
+                </div>
+            </article>
+            <article>
+                <div class="article-news-section article-news-header">
+
+                </div>
+                <div class="article-news-section article-news-main">
+                    <a></a>
+                </div>
+            </article>
+            <article>
+                <div class="article-news-section article-news-header">
+
+                </div>
+                <div class="article-news-section article-news-main">
+                    <a></a>
+                </div>
+            </article>
+            <article>
+                <div class="article-news-section article-news-header">
+
+                </div>
+                <div class="article-news-section article-news-main">
+                    <a></a>
+                </div>
+            </article>
+            <article>
+                <div class="article-news-section article-news-header">
+
+                </div>
+                <div class="article-news-section article-news-main">
+                    <a></a>
+                </div>
+            </article>
         </div>
     </main>
 
@@ -86,5 +128,21 @@
         </div>
     </nav>
 
+    <script>
+        var prevScrollpos = window.pageYOffset;
+        window.onscroll = function() {
+            var currentScrollPos = window.pageYOffset;
+            if (prevScrollpos > currentScrollPos) {
+                document.getElementById("top").style.top = "0";
+                document.getElementById("main-lesson-section").style.top = "250px";
+            } else {
+                document.getElementById("top").style.top = "-250px";
+                document.getElementById("main-lesson-section").style.top = "-250px";
+            }
+            prevScrollpos = currentScrollPos;
+        }
+    </script>
+
 </body>
 </html>
+
